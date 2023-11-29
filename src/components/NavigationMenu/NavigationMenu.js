@@ -17,13 +17,13 @@ const NavigationMenuDemo = () => {
               variant="ghost"
               tabIndex={"-1"}
             >
-              <Link className=" group-hover:text-black" href={"/"}>
+              <Link className="" href={"/"}>
                 <Text
                   p={"0"}
-                  className="group-hover:text-black line-height-[0]"
-                  color="gray"
+                  className=" line-height-[0]"
                   weight="regular"
                   size={"2"}
+                  color="gray"
                 >
                   Paillassons
                 </Text>
@@ -32,7 +32,7 @@ const NavigationMenuDemo = () => {
           </NavigationMenu.Trigger>
 
           <NavigationMenu.Content className=" absolute top-0 left-0 w-screen ">
-            <Container className="border border-blue-5" p={"1"} size={"2"}>
+            <Container className="" p={"1"} size={"2"}>
               <ul className="grid list-none gap-x-[10px] sm:w-[500px]  p-4  sm:grid-cols-[0.75fr_1fr]">
                 <Link
                   p={"0"}
@@ -61,10 +61,10 @@ const NavigationMenuDemo = () => {
               variant="ghost"
               tabIndex={"-1"}
             >
-              <Link className=" group-hover:text-black" href={"/"}>
+              <Link className=" " href={"/"}>
                 <Text
                   p={"0"}
-                  className="group-hover:text-black line-height-[0]"
+                  className=" line-height-[0]"
                   color="gray"
                   weight="regular"
                   size={"2"}
@@ -115,18 +115,64 @@ const NavigationMenuDemo = () => {
         </NavigationMenu.Item>
 
         <NavigationMenu.Item>
-          <Card variant="ghost">
-            <Link href={"/"}>
-              <Text
-                className="hover:text-black"
-                weight={"regular"}
-                size={"2"}
-                color="gray"
+          <NavigationMenu.Trigger className="">
+            <Card
+              className="group focus"
+              asChild
+              variant="ghost"
+              tabIndex={"-1"}
+            >
+              <Link href={"/"}>
+                <Text
+                  p={"0"}
+                  color="gray"
+                  className=" line-height-[0]"
+                  weight="regular"
+                  size={"2"}
+                >
+                  Promotions
+                </Text>
+              </Link>
+            </Card>
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
+            <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3">
+              <ListItem
+                title="Introduction"
+                href="/primitives/docs/overview/introduction"
               >
-                Promotions
-              </Text>
-            </Link>
-          </Card>
+                Build high-quality, accessible design systems and web apps.
+              </ListItem>
+              <ListItem
+                title="Getting started"
+                href="/primitives/docs/overview/getting-started"
+              >
+                A quick tutorial to get you up and running with Radix
+                Primitives.
+              </ListItem>
+              <ListItem title="Styling" href="/primitives/docs/guides/styling">
+                Unstyled and compatible with any styling solution.
+              </ListItem>
+              <ListItem
+                title="Animation"
+                href="/primitives/docs/guides/animation"
+              >
+                Use CSS keyframes or any animation library of your choice.
+              </ListItem>
+              <ListItem
+                title="Accessibility"
+                href="/primitives/docs/overview/accessibility"
+              >
+                Tested in a range of browsers and assistive technologies.
+              </ListItem>
+              <ListItem
+                title="Releases"
+                href="/primitives/docs/overview/releases"
+              >
+                Radix Primitives releases and their changelogs.
+              </ListItem>
+            </ul>
+          </NavigationMenu.Content>
         </NavigationMenu.Item>
 
         <NavigationMenu.Indicator className=" data-[state=hidden]:animate-fadeOut top-full z-[1] flex h-[10px] items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]">
@@ -144,7 +190,7 @@ const NavigationMenuDemo = () => {
 const ListItem = React.forwardRef(
   ({ className, children, title, ...props }, forwardedRef) => (
     <li>
-      <NavigationMenu.Link asChild>
+      <NavigationMenu.Link>
         <a
           className={classNames(
             "focus:shadow-[0_0_0_2px] focus:shadow-violet7 hover:bg-mauve-3 block select-none rounded-[6px] p-3 text-[15px] leading-none no-underline outline-none transition-colors",

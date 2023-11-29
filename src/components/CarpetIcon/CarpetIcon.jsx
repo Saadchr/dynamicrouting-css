@@ -16,7 +16,11 @@ function CarpetIcon() {
   }
 
   return (
-    <IconButton color="gray" variant="ghost" className="hover:cursor-auto">
+    <IconButton
+      color="gray"
+      variant="ghost"
+      className="ml-[-8px] hover:cursor-auto"
+    >
       {theme === "dark" ? (
         <svg
           fill="white"
