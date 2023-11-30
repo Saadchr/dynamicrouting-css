@@ -2,7 +2,7 @@ import { Theme, ThemePanel, Flex } from "@radix-ui/themes";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "../components/header";
+import Header from "@/components/header";
 import ThemeProviding from "@/components/ThemeProviding";
 import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
