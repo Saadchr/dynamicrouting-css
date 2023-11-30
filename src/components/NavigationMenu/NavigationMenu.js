@@ -7,7 +7,7 @@ import { Container, Text, Card, Link as RadixLink } from "@radix-ui/themes";
 
 const NavigationMenuDemo = () => {
   return (
-    <NavigationMenu.Root className="  p-1 z-[1] flex w-screen items-baseline justify-center">
+    <NavigationMenu.Root className="  p-1 z-[1] flex w-screen items-center justify-center">
       <NavigationMenu.List className="center m-0 flex gap-8 list-none  p-0 ">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger>
@@ -142,6 +142,64 @@ const NavigationMenuDemo = () => {
                 href="/primitives/docs/overview/introduction"
               >
                 Build high-quality, accessible design systems and web apps.
+              </ListItem>
+              <ListItem
+                title="Getting started"
+                href="/primitives/docs/overview/getting-started"
+              >
+                A quick tutorial to get you up and running with Radix
+                Primitives.
+              </ListItem>
+              <ListItem title="Styling" href="/primitives/docs/guides/styling">
+                Unstyled and compatible with any styling solution.
+              </ListItem>
+              <ListItem
+                title="Animation"
+                href="/primitives/docs/guides/animation"
+              >
+                Use CSS keyframes or any animation library of your choice.
+              </ListItem>
+              <ListItem
+                title="Accessibility"
+                href="/primitives/docs/overview/accessibility"
+              >
+                Tested in a range of browsers and assistive technologies.
+              </ListItem>
+              <ListItem
+                title="Releases"
+                href="/primitives/docs/overview/releases"
+              >
+                Radix Primitives releases and their changelogs.
+              </ListItem>
+            </ul>
+          </NavigationMenu.Content>
+        </NavigationMenu.Item>
+
+        <NavigationMenu.Item>
+          <NavigationMenu.Trigger className="">
+            <Card
+              className="group focus"
+              asChild
+              variant="ghost"
+              tabIndex={"-1"}
+            >
+              <Link href={"./products"}>
+                <Text
+                  p={"0"}
+                  color="gray"
+                  className=" line-height-[0]"
+                  weight="regular"
+                  size={"2"}
+                >
+                  All Products
+                </Text>
+              </Link>
+            </Card>
+          </NavigationMenu.Trigger>
+          <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
+            <ul className="m-0 grid list-none gap-x-[10px] p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-3">
+              <ListItem title="Introduction" href="/products/1">
+                Check our product number numbe one
               </ListItem>
               <ListItem
                 title="Getting started"

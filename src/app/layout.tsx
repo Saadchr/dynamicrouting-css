@@ -22,7 +22,14 @@ export default function RootLayout({
       <body className={`relative ${inter.className}`}>
         <ThemeProviding>
           <Theme className="min-h-full">
-            <Flex p={"0"} m={"0"} direction={"column"} className="min-h-full">
+            <Flex
+              display={"inline-flex"}
+              justify={"start"}
+              p={"0"}
+              m={"0"}
+              direction={"column"}
+              className="min-h-full"
+            >
               <Header />
               {children}
               <Footer />
