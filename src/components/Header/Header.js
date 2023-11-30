@@ -8,7 +8,7 @@ import { BackpackIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 
 function Header() {
   return (
-    <Section className="m-0 p-0 h-14 relative bg-gray-1 shadow-md  ">
+    <Section className="m-0 p-0 h-14 max-h-14 relative bg-gray-1 shadow-md  ">
       <Container asChild size={"3"} className="  h-full w-screen  ">
         <Flex className="h-full  p-3  " justify="between" align={"start"}>
           <Link className="p-0  " href={"/"}>

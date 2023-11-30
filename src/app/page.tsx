@@ -2,8 +2,17 @@ import { Heading, Section, Flex } from "@radix-ui/themes";
 
 export default function Home() {
   return (
-    <Section className="">
-      <Flex direction="column" justify={"center"} align={"center"}>
+    <Section
+      p={"3"}
+      grow={"1"}
+      className=" flex items-center justify-center  h-min-full"
+    >
+      <Flex
+        className="h-min-full"
+        direction="column"
+        justify={"center"}
+        align={"center"}
+      >
         <Heading align={"center"} size={"1"} as="h1">
           Hey there, this is the home page!
         </Heading>
