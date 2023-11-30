@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`relative ${inter.className}`}>
         <ThemeProviding>
-          <Theme className="min-h-full">
+          <Theme appearance="light" className="min-h-full">
             <Flex
               display={"inline-flex"}
               justify={"start"}
