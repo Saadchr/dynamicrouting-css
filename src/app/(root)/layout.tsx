@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import { Theme, ThemePanel, Flex } from "@radix-ui/themes";
 import "../globals.css";
 import type { Metadata } from "next";
@@ -20,22 +21,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`relative ${inter.className}`}>
-        <ThemeProviding>
-          <Theme appearance="light" className="min-h-full">
-            <Flex
-              display={"inline-flex"}
-              justify={"start"}
-              p={"0"}
-              m={"0"}
-              direction={"column"}
-              className="min-h-full"
-            >
-              <Header />
-              {children}
-              <Footer />
-            </Flex>
-          </Theme>
-        </ThemeProviding>
+        <ClerkProvider>
+          <ThemeProviding>
+            <Theme appearance="light" className="min-h-full">
+              <Flex
+                display={"inline-flex"}
+                justify={"start"}
+                p={"0"}
+                m={"0"}
+                direction={"column"}
+                className="min-h-full"
+              >
+                <Header />
+                {children}
+                <Footer />
+              </Flex>
+            </Theme>
+          </ThemeProviding>
+        </ClerkProvider>
       </body>
     </html>
   );
